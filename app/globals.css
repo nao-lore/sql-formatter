@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* SQL syntax highlighting */
+.sql-keyword { color: #2563eb; font-weight: 600; }
+.sql-string { color: #16a34a; }
+.sql-number { color: #ea580c; }
+.sql-comment { color: #9ca3af; font-style: italic; }
+.sql-paren { color: #7c3aed; }
+.sql-operator { color: #dc2626; }
+.sql-plain { color: #171717; }
+
+/* Copy button animation */
+@keyframes checkmark-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.checkmark-animate {
+  animation: checkmark-pop 0.3s ease-out;
+}
